@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+
+	<meta name="author" content="Oliver Pope">
+	<meta name="description" content="Stuff about my website">
+	<title>Oliver Pope's Website</title> 
+
+	<!-- Normalize -->
+	<link rel="stylesheet" href="stylesheets/normalize.css">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="stylesheets/style.css">
+
+</head>
+<body>
+
+	<div id="page">
+		
+		<header>
+			
+			<h1>oliver's special sentence gen</h1>
+			<hr />
+
+		</header>
+
+		<div id="content">
+
+			<input type="button" class="button" value="new word" onclick="document.getElementById('quoteBody').innerHTML = getQuote();" /> 
+			<h1 id="quoteBody"></h1>
+
+		</div>
+
+	</div>
+
+	<!-- Script -->
+	<script type="text/javascript"> 
+	 var nouns = ["car", "horse", "apple", "person", "chimp", "place", "sofa", "theater", "fire", "phone", "building", "chair", "eye", "nose", "head", "face", "smile"];
+	 var adjectives = ["red", "fast", "lonely", "hungry", "insane", "happy", "sad", "super", "colorful", "tainted", "aggravated", "gloomy", "cloudy", "white"];
+
+	 function getQuote() {
+	   var randomNounIndex = Math.floor(Math.random() * nouns.length);
+	   var randomAdjectiveIndex = Math.floor(Math.random() * adjectives.length);
+	   var retVal = "The " + nouns[randomNounIndex] + " is " + adjectives[randomAdjectiveIndex] + ".";
+	   return retVal;}
+	</script>
+
+</body>
+</html>
